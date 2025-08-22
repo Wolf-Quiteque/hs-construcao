@@ -253,10 +253,10 @@ $(document).ready(function($) {
             render: function(data) {
                 var el = $(this.el);
                 el.empty()
-                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.days, 2) + " </span><span class='ts-cc-description'>Days</span></div>")
-                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.hours, 2) + " </span><span class='ts-cc-description'>Hours</span></div>")
-                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.min, 2) + " </span><span class='ts-cc-description'>Minutes</span></div>")
-                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.sec, 2) + " </span><span class='ts-cc-description'>Seconds</span></div>");
+                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.days, 2) + " </span><span class='ts-cc-description'>Dias</span></div>")
+                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.hours, 2) + " </span><span class='ts-cc-description'>Horas</span></div>")
+                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.min, 2) + " </span><span class='ts-cc-description'>Minutos</span></div>")
+                .append("<div><span class='ts-cc-number'>" + this.leadingZeros(data.sec, 2) + " </span><span class='ts-cc-description'>Segundos</span></div>");
             }
         });
     });
