@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>H&S</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Site em construção" name="description">
+  <meta content="H&S" name="author">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Bootstrap css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" id="app-style">
+
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Ensure footer sticks to bottom */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    main {
+      flex: 1; /* pushes footer down */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Fullscreen video background */
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    #video-background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    /* Black overlay */
+    #video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    /* Make all text white */
+    body, h1, h2, h3, h4, h5, h6, p, .fw-medium {
+      color: white !important;
+    }
+
+    /* Social media icons */
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icon {
+      display: inline-block;
+      margin: 0 15px;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      color: #ff6b6b;
+      transform: scale(1.2);
+    }
+
+    /* Content container */
+    .content-container {
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .content-container {
+        padding: 20px;
+        margin: 10px;
+      }
+      .social-icon {
+        font-size: 20px;
+        margin: 0 10px;
+      }
+    }
+
+    /* Footer styling */
+    footer.footer {
+      background: transparent;
+      padding: 15px 0;
+      z-index: 1;
+    }
+
+    footer .social-icon {
+      font-size: 20px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Video Background -->
+  <div id="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="timelaps.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos em HTML5.
+    </video>
+  </div>
+
+  <!-- Dark overlay -->
+  <div id="video-overlay"></div>
+
+  <!-- Content -->
+  <main>
+    <div class="row g-0 justify-content-center w-100 m-xxl-5 px-xxl-4 m-3">
+      <div class="col-md-6">
+        <div class="mb-4">
+          <a href="index.html">
+            <img src="images/logo-bo.webp" alt="dark logo" height="36" class="logo">
+          </a>
+        </div>
+
+        <div class="py-xxl-4 py-3 mb-0">
+          <div class="content-container">
+            <div>
+              <h3 class="fw-semibold mb-2 lh-base">Site em Construção</h3>
+              <p class="mb-0 fst-italic" style="font-weight: bold;">O Grupo H&S é uma multinacional com presença sólida em Angola desde 2006, ligada ao Beijing Haishan Holding Group.</p>
+            </div>
+
+            <div id="countdown" class="countdown-timer mt-5 pt-4" data-countdown-date="2025-09-11T14:00:00">
+              <div class="row justify-content-center my-4 g-2">
+                <div class="col-6 col-sm-4 col-md-3 col-lg">
+                  <div class="p-2">
+                    <h1 data-days="" class="fw-bold display-3">00</h1>
+                    <p class="fw-medium text-uppercase mb-0">Dias</p>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg">
+                  <div class="p-2">
+                    <h1 data-hours="" class="fw-bold display-3">00</h1>
+                    <p class="fw-medium text-uppercase mb-0">Horas</p>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg">
+                  <div class="p-2">
+                    <h1 data-minutes="" class="fw-bold display-3">00</h1>
+                    <p class="fw-medium text-uppercase mb-0">Minutos</p>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg">
+                  <div class="p-2">
+                    <h1 data-seconds="" class="fw-bold display-3">00</h1>
+                    <p class="fw-medium text-uppercase mb-0">Segundos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="end-message" class="countdown-end" style="display: none;">
+              O site está pronto!
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+              <a href="https://www.facebook.com/people/HS-China-Huashi/100089617172193/?_rdr" class="social-icon" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/grupohs.angola/?hl=en" class="social-icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-white">
+      <span class="mb-2 mb-md-0">Criado por Mucua © 2025</span>
+    
+    </div>
+  </footer>
+
+  <!-- js -->
+  <script src="js/coming-soon.js"></script>
+</body>
+</html>
