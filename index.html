@@ -133,13 +133,15 @@
 </head>
 
 <body>
-  <!-- Video Background -->
-  <div id="video-background">
-    <video autoplay muted loop playsinline>
-      <source src="timelaps.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos em HTML5.
-    </video>
-  </div>
+<!-- Video Background -->
+<div id="video-background">
+  <video autoplay muted loop playsinline preload="none" 
+         poster="https://res.cloudinary.com/dtfx1jpkq/video/upload/so_0/f_auto,q_auto/timelaps_kterfl.jpg">
+    <source src="https://res.cloudinary.com/dtfx1jpkq/video/upload/f_auto,q_auto/timelaps_kterfl.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos em HTML5.
+  </video>
+</div>
+
 
   <!-- Dark overlay -->
   <div id="video-overlay"></div>
